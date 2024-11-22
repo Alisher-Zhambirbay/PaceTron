@@ -40,7 +40,9 @@ def run():
             print(f"Error: unable to import main from Programm.\n{e}")
         except AttributeError as e:
             print(f"Error: The 'main' module does not contain 'run_pacetron' function: {e}")
-        except KeyboardInterrupt: exit(1) #ignore this error.
+        except KeyboardInterrupt:
+            print("\nExiting PaceTron. Goodbye!")
+            exit(1)
     else:
         print("Cannot run PaceTron. Setup not was succesfull")
 
